@@ -1,0 +1,129 @@
+did 2 coding questions based on array : 
+
+1. two sum 
+
+brute force
+class Solution{
+    public int[] twoSum(int[] nums, int target) {
+        int[] arr = new int[2];
+        for (int i=0 ; i<nums.length-1 ; i++){
+            for (int j=i+1 ; j<nums.length ; j++){
+                if((nums[i]+nums[j])==target){
+                    arr[0]=i;
+                    arr[1]=j;
+                }
+            }
+        }
+        return arr;
+    }
+}
+
+
+/* class Solution{
+    public int[] twoSum(int[] nums, int target) {
+        for (int i=0 ; i<nums.length-1 ; i++){
+            for (int j=i+1 ; j<nums.length ; j++){
+                if((nums[i]+nums[j])==target){
+                    return new int[] {i,j};
+                }
+            }
+        }
+        return null;
+    }
+}
+*/
+
+2. contains duplicate 
+
+brute force
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//         for (int i = 0 ; i<nums.length-1 ; i++){
+//             for (int j = i+1 ; j<nums.length ; j++){
+//                 if(nums[i]==nums[j])
+//                           {return true;}
+                
+//             }
+//         }
+//         return false;
+//     }
+// }
+
+// // N * N 
+
+
+little optimised 
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0 ; i<nums.length-1 ; i++){
+                if(nums[i]==nums[i+1])
+                 { return true;
+                   }
+        }
+        return false;
+    }
+}
+
+// Nlongn
+
+
+// Hash Set
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//         HashSet<Integer> set = new HashSet<>() ;
+//         for (int i=0 ; i<nums.length ; i++){
+//             set.add(nums[i]);
+//         }
+//         if(set.size() < nums.length ){
+//             return true;
+//         }
+//         else 
+//             return false;
+        
+//     }
+// }
+
+
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//         HashSet<Integer> set = new HashSet<>() ;
+        
+//         for(int i=0 ; i<nums.length ; i++){
+//             if(set.contains(nums[i])){
+//                 return true; }
+//         // for (int i : nums){
+//             // if(set.contains(i))
+//             //    return true;
+//             // set.add(i);
+//             set.add(nums[i]);
+//         }
+//         return false;
+//     }
+// }
+
+
+//Hash Map
+      
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashMap<Integer, Boolean > map = new HashMap<>() ;
+        
+        for(int i=0 ; i<nums.length ; i++){
+            if(map.containsKey(nums[i])){
+                return true;
+            }
+                map.put(nums[i],true);
+        }
+        return false;
+    }
+}
+//containsValue has O(N) time complexity avg
+//containsKey has O(1) time complexity avg
+
+/*
+containsValue :  used to check whether a particular value is being mapped by a single or more than one key in the HashMap. It takes the Value as a parameter and returns True if that value is mapped by any of the key in the map.  
+
+containsKey :  is used to check whether a particular key is being mapped into the HashMap or not. It takes the key element as a parameter and returns True if that element is mapped in the map.
+*/
