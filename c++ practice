@@ -1,0 +1,127 @@
+#include<iostream>
+
+using namespace std;
+
+
+
+// int main(){
+    
+//     int n;
+//     cout<<"Enter integer to calculcate its factorial\n";
+//     cin>>n;
+    
+//     int fact = 1;
+    
+//     for (int i=1 ; i<=n ; i++){
+//         fact = fact * i;
+//     }
+//     cout << "Factorial is : "<<fact<<endl;
+//     return 0;
+// }
+
+// int fact(int p){
+//     if (p==0 | p==1) 
+//         return 1;
+//     return p*fact(p-1);
+// }
+
+// int main(){
+    
+//     int n;
+//     cout<<"Enter integer to calculcate its factorial\n";
+//     cin>>n;
+//     cout << "Factorial is : "<<fact(n)<<endl;
+//     return 0;
+// }
+
+
+//12321
+// bool isPalindrome(int num){
+//     int temp = num;
+//     int save=0;
+//     while(temp!=0){
+//         save = (save*10)+(temp%10);  //0+1 = 1 , 10+2=12 , 120+3=123 , 1232+
+//         temp = temp/10;
+//     }
+//     return (save == num);
+// }
+
+// int main(){
+//     int num;
+//     cout << "Enter number\n";
+//     cin>>num;
+    
+//     if(isPalindrome(num)==1){
+//         cout<<"This is Palinfrome";
+//     }
+//     else {
+//         cout<<"Not Palindrome";
+//     }
+
+// }
+
+
+// bool isarmtstrongnumber(int num){
+//     int temp = num;
+//     int ans = 0;
+    
+//     while (temp!=0){
+//     int rem = temp%10;
+//     ans = ans + (rem*rem*rem);
+//     temp = temp/10;
+//     }
+    
+//     return (ans==num);
+    
+// }
+
+
+// int main(){
+//     int num;
+//     cout<<"Please enter number to check";
+//     cin>>num;
+    
+//     if(isarmtstrongnumber(num)==1){
+//         cout<<"Armstrong number";
+//     }
+//     else
+//       cout <<"Not Armstrong";
+// }
+//0 ,  1 , 1 , 2 , 3 , 5 , 8 , 13 
+
+
+// int fib(int n) {
+//     int first = 0, second = 1, ans = 0;
+//     if (n == 0) 
+//         return first;
+//     if (n == 1)
+//         return second;
+
+//     for (int i = 2; i <= n; i++) {
+//         ans = first + second;
+//         first = second;
+//         second = ans;
+//     }
+//     return ans;
+// }
+
+// int main() {
+//     int n;
+//     cout << "Enter Nth Fibonacci number: ";
+//     cin >> n;
+//     cout << "Fibonacci sum: " << fib(n) << endl;
+
+//     return 0;
+// }
+
+
+
+int main(){
+    string str;
+    cout<<"Enter the string : \n";
+    cin>>str;
+    cout<<"Given string : "<<str;
+    for(int i=str.length()-1 ; i>=0; i--){
+        cout<<" "<<str[i];
+    }
+}
