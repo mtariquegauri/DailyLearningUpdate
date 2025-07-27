@@ -146,7 +146,12 @@ for(int rownumber=0 ; rownumber<n ; rownumber++){
         
 	for(int i=0 ; i<(2*rownumber+1);i++){
 	cout<<"*";
-}
+        }
+
+        for(int colnumber=0 ; colnumber<n-(rownumber+1); colnumber++){
+		cout<<" ";
+	}
+
 cout<<endl;	
 
 }
