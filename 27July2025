@@ -20,3 +20,141 @@ int main(){
     cin>>n;
     patt(n);
 }
+
+2.
+#include<iostream>
+// #include<bits/stdlibc++.h>
+
+using namespace std;
+
+void patt(int n){
+for(int rownumber=0; rownumber<n ; rownumber++){
+	for(int colnumber=0 ; colnumber<=rownumber ; colnumber++){
+		cout<<"*";
+	}
+	cout<<endl;
+}
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+
+3.
+#include<iostream>
+using namespace std;
+
+void patt(int n){
+for(int rownumber=0 ; rownumber<n ; rownumber++){
+	for(int colnumber=0 ; colnumber<=rownumber ; colnumber++){
+		cout<<colnumber+1;
+}
+cout<<endl;
+}
+
+
+
+
+
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+
+
+4. #include<iostream>
+using namespace std;
+
+void patt(int n){
+for(int rownumber=0;rownumber<n;rownumber++){
+	for(int colnumber=0;colnumber<=rownumber;colnumber++){
+		cout<<(rownumber+1);	
+	}
+	cout<<endl;
+}
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+5. #include<iostream>
+using namespace std;
+
+void patt(int n){
+for(int rownumber=0; rownumber<n ; rownumber++){
+	for(int colnumber=0; colnumber<=((n-1)-rownumber) ; colnumber++){
+		cout<<"*";
+}
+cout<<endl;
+}
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+6. #include<iostream>
+using namespace std;
+
+void patt(int n){
+for(int rownumber=0 ; rownumber<n ; rownumber++){
+	for(int colnumber=0 ; colnumber<(n-rownumber) ; colnumber++){
+	 	cout<<(colnumber+1);
+ }
+cout<<endl;
+}
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+7. #include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+
+
+for(int rownumber=0 ; rownumber<n ; rownumber++){
+	for(int colnumber=0 ; colnumber<n-(rownumber+1); colnumber++){
+		cout<<" ";
+	}
+        
+	for(int i=0 ; i<(2*rownumber+1);i++){
+	cout<<"*";
+}
+cout<<endl;	
+
+}
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
