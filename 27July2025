@@ -1,0 +1,22 @@
+1.https://takeuforward.org/pattern/pattern-1-rectangular-star-pattern/
+
+#include<iostream>
+// #include<bits/stdlibc++.h>
+
+using namespace std;
+
+void patt(int n){
+	for(int rownumber=0 ; rownumber<n; rownumber+=1){
+		for(int colnumber=0 ; colnumber<n ; colnumber+=1){
+			cout<<"*";
+		}
+		cout<<"\n";
+	    
+	}
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+}
