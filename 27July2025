@@ -435,3 +435,81 @@ int main(){
     return 0;
 }
 
+18. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+  
+  char ch='A';
+  char p = ch + (n-1);
+  for(int r=1; r<=n; r++){
+      for(int s=1 ; s<=r ; s++){
+          cout<<p;
+          p++;
+      }
+      p = p - r -1;
+      cout<<endl;
+  }
+  
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+
+19. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+  
+  for(int r=1 ; r<=n ; r++){
+      for(int c=1 ; c<=n-r+1 ; c++){
+          cout<<"*";
+      }
+      
+      for(int p=1 ; p<=2*(r-1) ; p++){ //for printing spaces - we can also increament space by 2 each time
+      //like intialisating int initialSpace=0 , then using p<initialSpace , then initialSpace=+2;
+          cout<<" ";
+      }
+      
+    for(int c=1 ; c<=n-r+1 ; c++){ 
+          cout<<"*";
+     }
+      cout<<endl;
+      
+  }
+  
+    for(int r=1 ; r<=n ; r++){
+      for(int c=1 ; c<=r ; c++){
+          cout<<"*";
+      }
+      
+      for(int p=1 ; p<=2*(n-r) ; p++){ //for printing spaces - we can also decreament space by 2 each time
+          cout<<" ";
+      }
+      
+      for(int c=1 ; c<=r ; c++){
+          cout<<"*";
+      }
+      cout<<endl;
+      
+  }
+  
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+20. 
