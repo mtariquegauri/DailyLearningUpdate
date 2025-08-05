@@ -314,3 +314,124 @@ int main(){
     patt(n);
     return 0;
 }
+
+14. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+
+    for(int r=1 ; r<=n ; r++){
+        char ch = 'A';
+        for(int s=1 ; s<=r ; s++){
+            cout<<ch;
+            ch++;
+        }
+        cout<<endl;
+        
+    }
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+15. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+
+    for(int r=1 ; r<=n ; r++){
+        char ch = 'A';
+        for(int s=1 ; s<=n-r-1 ; s++){
+            //for question14. we used s<=r , for Q. 15 we used s<=n-r-1
+            cout<<ch;
+            ch++;
+        }
+        cout<<endl;
+        
+    }
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+16. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+    
+    char ch = 'A';
+    for(int r=1 ; r<=n ; r++){
+        
+        for(int s=1 ; s<=r ; s++){
+            //for question14. we used s<=r , for Q. 15 we used s<=n-r-1
+            cout<<ch;
+            
+        }
+        ch++;
+        cout<<endl;
+        
+    }
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
+17. 
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+void patt(int n){
+    
+    for(int r=1 ; r<=n ; r++){
+        for(int s=1 ; s<=n-r ; s++){
+            cout<<" ";
+        }
+        
+        // int breakpoint=ceil((2*r-1)/2); we can use this or the one below instead
+        int breakpoint=(2*r-+1)/2;
+        char ch='A';
+        
+        for(int w=1 ; w<=2*r-1 ; w++){
+            cout<<ch;
+            if(w<=breakpoint) ch++;
+            else ch--;
+            }
+            
+        
+        for(int s=1 ; s<=n-r ; s++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+        
+}
+
+int main(){
+    int n;
+    cin>>n;
+    patt(n);
+    return 0;
+}
+
